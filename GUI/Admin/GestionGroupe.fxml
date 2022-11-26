@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GestionGroupe">
+    <children>
+        <AnchorPane prefHeight="600.0" prefWidth="222.0" style="-fx-background-color: d66915;">
+            <children>
+                <Label layoutX="62.0" layoutY="83.0" text="Menu" textFill="WHITE">
+                    <font>
+                        <Font size="38.0" />
+                    </font>
+                </Label>
+                <AnchorPane layoutX="28.0" layoutY="144.0" prefHeight="8.0" prefWidth="166.0" style="-fx-background-color: ffffff;" />
+            <MenuButton layoutX="31.0" layoutY="361.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="131.0" text="Groupe">
+              <items>
+                <MenuItem fx:id="grp1" mnemonicParsing="false" onAction="#handleButtonAction" text="niveau haut autonome" />
+                <MenuItem fx:id="grp2" mnemonicParsing="false" onAction="#handleButtonAction" text="niveau haut " />
+                  <MenuItem fx:id="grp3" mnemonicParsing="false" onAction="#handleButtonAction" text="niveau bas " />
+                  <MenuItem fx:id="grp4" mnemonicParsing="false" onAction="#handleButtonAction" text="spectre autistique" />
+              </items>
+            </MenuButton>
+            <Button layoutX="31.0" layoutY="292.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="131.0" text="Employée" />
+            <Button layoutX="31.0" layoutY="223.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="131.0" text="Enfant" />
+            </children>
+        </AnchorPane>
+        <TextField fx:id="search" layoutX="247.0" layoutY="45.0" prefHeight="37.0" prefWidth="691.0" promptText="Recherche" />
+        <ImageView fitHeight="30.0" fitWidth="19.0" layoutX="910.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../Data/loop.png" />
+            </image>
+        </ImageView>
+        <TableView fx:id="table" layoutX="261.0" layoutY="123.0" prefHeight="386.0" prefWidth="401.0">
+            <columns>
+                <TableColumn fx:id="colnumgrp" prefWidth="160.0" text="Numéro de groupe" />
+                <TableColumn minWidth="0.0" prefWidth="0.0" text="nom" />
+                <TableColumn fx:id="colidenf" text="ID enfant" />
+            <TableColumn fx:id="colnom" text="nom" />
+            <TableColumn fx:id="colprenom" text="prenom" />
+            </columns>
+        </TableView>
+        <VBox layoutX="758.0" layoutY="281.0" prefHeight="101.0" prefWidth="194.0" spacing="20.0" />
+      <Button fx:id="aj" layoutX="743.0" layoutY="434.0" mnemonicParsing="false" onAction="#handleButtonAction" text="ajouter" />
+      <Button fx:id="modifier" layoutX="816.0" layoutY="434.0" mnemonicParsing="false" onAction="#handleButtonAction" text="modifier" />
+      <Button fx:id="supprimer" layoutX="898.0" layoutY="434.0" mnemonicParsing="false" onAction="#handleButtonAction" text="supprimer" />
+          <TextField fx:id="idgrp" layoutX="761.0" layoutY="316.0" promptText="numéro du groupe" />
+    </children>
+</AnchorPane>
